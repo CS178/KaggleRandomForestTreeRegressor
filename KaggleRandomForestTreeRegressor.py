@@ -34,6 +34,7 @@ class KaggleRandomForestTreeRegressor:
         params_svm = {feature_name.lower(): feature}
         clf = RandomForestRegressor()
         clf.set_params(**params_svm)
+        clf = clf.fit(self.Xtr, self.Ytr)
 
         return clf
 
@@ -42,7 +43,6 @@ class KaggleRandomForestTreeRegressor:
 
         for feature in feature_arr:
             clf = self._create_random_forest(feature, feature_name)
-            clf = clf.fit(self.Xtr, self.Ytr)
             score = clf.score(self.Xte, self.Yte)
             error_arr.append(score)
 
