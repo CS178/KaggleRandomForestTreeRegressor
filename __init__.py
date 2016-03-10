@@ -39,11 +39,10 @@ for feature in features_to_test:
 # PREDICTIONS
 
 params = {
-    'n_estimators': 100
-    'max_features': 40,
-    'max_depth': 15,
-    'min_samples_split': 2,
-    'min_samples_leaf': 11
+    'n_estimators': 100,
+    'max_features': 65,
+    'max_depth': 12,
+    'max_leaf_nodes': 45
 }
 
 K.set_params(params)
