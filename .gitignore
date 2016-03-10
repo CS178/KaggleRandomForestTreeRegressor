@@ -3,4 +3,4 @@ data/
 mltools/
 *.pyc
 *.ipynb
-
+*.csv
